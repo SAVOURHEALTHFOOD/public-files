@@ -1,0 +1,395 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif; /* Montserrat for everything */
+}
+
+body {
+    color: white;
+    text-align: center;
+    background-image: url('images/Background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Header */
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8); /* Slight transparency */
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Logo */
+.logo {
+    width: 120px;
+    margin-left: 20px;
+}
+
+/* Navigation */
+nav {
+    margin-right: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #ace500;
+}
+
+/* Hero Section with Parallax Background */
+.hero {
+    background-image: url('images/background2.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* text-shadow: 2px 2px 5px black; */
+}
+
+.hero h1 {
+    font-size: 48px;
+    color: #ace500;
+}
+
+.hero span {
+    color: white;
+}
+
+/* Slogan with Satisfy Font */
+.slogan {
+    font-family: 'Satisfy', cursive;
+    font-size: 22px;
+    font-style: italic;
+    color: white; /* Green color for a fancy look */
+    margin-top: 10px;
+}
+
+/* Call-to-Action Button */
+.btn {
+    display: inline-block;
+    background-color: #ace500;
+    color: black;
+    padding: 12px 24px;
+    margin-top: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: 0.3s;
+    text-shadow: none; /* Override inherited text shadow */
+}
+
+
+.btn:hover {
+    background-color: white;
+}
+
+
+.content-section p {
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto 20px auto;
+  }
+
+.content-section h2 {
+    color: white;
+    font-size: 32px;
+    margin-bottom: 20px;
+    padding-top: 30px;
+}
+
+/* Menu Items */
+.menu-items {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.menu-item {
+    background-color: #1f1f1f;
+    padding: 15px;
+    width: 300px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.menu-item img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.menu-item:hover {
+    transform: scale(1.05);
+}
+
+/* Contact Form */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+input, textarea {
+    width: 80%;
+    padding: 10px;
+    border: 1px solid #ace500;
+    background: black;
+    color: white;
+}
+
+button {
+    background-color: #ace500;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: white;
+    color: black;
+}
+
+
+/* New Specialty Layout for the Menu Section */
+.specialty {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 40px 0;
+    padding: 0 20px;
+}
+
+.specialty.reverse {
+    flex-direction: row-reverse;
+}
+
+.specialty-image img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.specialty-description {
+    max-width: 500px;
+    margin: 0 20px;
+    text-align: left;
+}
+
+.specialty-description h3 {
+    color: #ace500;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.specialty-description p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .specialty {
+        flex-direction: column;
+        text-align: center;
+    }
+    .specialty.reverse {
+        flex-direction: column;
+    }
+    .specialty-description {
+        margin: 20px 0;
+    }
+}
+
+/* Overlap Container */
+.overlap-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    flex-wrap: wrap;
+    gap: 40px; /* Adjust gap between items */
+    margin: 40px 0;
+  }
+  
+  /* Each Overlap Item */
+  .overlap-item {
+    position: relative;
+    width: 300px; /* Adjust as needed */
+    border-radius: 10px;
+    overflow: hidden;
+    /* Use negative margin to create overlap effect on larger screens */
+    margin-top: -20px;
+    margin-bottom: -20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+  }
+  
+  .overlap-item:hover {
+    transform: scale(1.03);
+  }
+  
+  /* Overlap Item Images */
+  .overlap-item img {
+    width: 100%;
+    display: block;
+  }
+  
+  /* Overlay for Text Description */
+  .overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent black overlay */
+    padding: 10px;
+    text-align: left;
+    color: white;
+  }
+  
+  .overlay h3 {
+    font-size: 22px;
+    color: #ace500;
+    margin-bottom: 5px;
+  }
+  
+  .overlay p {
+    font-size: 16px;
+    line-height: 1.4;
+  }
+  
+  /* Responsive: Stack vertically on small screens */
+  @media (max-width: 768px) {
+    .overlap-container {
+      flex-direction: column;
+      gap: 20px;
+    }
+    
+    .overlap-item {
+      margin: 0 auto;
+    }
+  }
+  
+
+/* Set up a responsive grid gallery */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    margin: 20px 0;
+  }
+  
+  /* Style each gallery item */
+  .gallery-item {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Make sure images fill their container */
+  .gallery-item img {
+    width: 100%;
+    display: block;
+    border-radius: 8px;
+  }
+  
+  /* Overlay effect */
+  .overlay {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0,0,0,0.6);
+    color: #fff;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
+
+  /* Default styles for desktop: show nav, hide hamburger */
+.menu-toggle,
+.hamburger {
+  display: none;
+}
+
+.main-nav {
+  display: block;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  /* Hide the standard nav */
+  .main-nav {
+    display: none;
+    position: absolute;
+    top: 60px; /* Adjust based on your header height */
+    right: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Show the hamburger icon */
+  .hamburger {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+}
+  
+  .hamburger span {
+    display: block;
+    height: 3px;
+    background: white;
+    margin: 4px 0;
+    transition: 0.3s;
+  }
+  
+  /* Show the checkbox control so it can be toggled (but keep it visually hidden) */
+  .menu-toggle {
+    display: block;
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+  /* When the checkbox is checked, show the nav links */
+  .menu-toggle:checked + .hamburger + .main-nav {
+    display: block;
+  }
+}
+
+  
+
+/* Footer */
+footer {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #1f1f1f;
+}
+
+
